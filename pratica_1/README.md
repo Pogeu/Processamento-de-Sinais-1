@@ -42,6 +42,19 @@ A prática aborda geração, análise e reprodução de sinais, além do uso de 
 ## Observação importante
 Para convoluir dois sinais, eles precisam estar na mesma frequência de amostragem.
 
+## Resumo das respostas das questões
+1. **Sinais senoidais**: conforme a frequência aumenta de `500 Hz` para `5000 Hz` e `10000 Hz`, cresce o número de oscilações no mesmo intervalo de tempo. Na reprodução, isso se traduz em sons progressivamente mais agudos.
+
+2. **Sinais chirp**: os chirps linear, quadrático e logarítmico apresentam varredura contínua de frequência entre `500 Hz` e `10000 Hz`, mas com taxas de crescimento diferentes. Auditivamente, todos começam mais graves e terminam mais agudos.
+
+3. **Áudio `handel.wav`**: no domínio do tempo, o sinal é mais complexo e não periódico como os anteriores, por representar um trecho musical com várias componentes simultâneas. Ao reproduzir com `2x` e `4x` a frequência de amostragem, o áudio fica mais rápido e mais agudo. No espectro, aparecem várias componentes de frequência, diferentemente dos sinais mais simples das questões 1 e 2.
+
+4. **Resposta ao impulso de uma sala**: o procedimento consiste em emitir um sinal conhecido no ambiente, gravar a resposta com um microfone e aplicar deconvolução para estimar a resposta ao impulso. Os principais cuidados envolvem ruído ambiente, não linearidades da fonte, reflexões múltiplas e posicionamento do microfone.
+
+5. **`h_banheiro.wav` e `sinal_taca.wav`**: a resposta ao impulso do banheiro apresenta um pico inicial seguido de reflexões decrescentes, enquanto o sinal da taça mostra uma oscilação ressonante com decaimento gradual. Na audição, a taça soa como uma ressonância definida, e o banheiro como um impulso curto com reverberação.
+
+6. **Convolução com `h_banheiro.wav`**: ao convoluir os sinais de entrada com a resposta ao impulso do banheiro, o resultado passa a simular a propagação do som nesse ambiente. No tempo, os sinais ficam mais longos por causa das reflexões; na audição, surge uma reverberação perceptível, típica de um espaço fechado.
+
 ## Sugestão de organização
 Uma forma prática de estruturar esta pasta é:
 - um notebook para geração e análise dos sinais senoidais e chirps;
