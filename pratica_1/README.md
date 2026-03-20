@@ -42,6 +42,9 @@ A prática aborda geração, análise e reprodução de sinais, além do uso de 
 ## Observação importante
 Para convoluir dois sinais, eles precisam estar na mesma frequência de amostragem.
 
+## Observação sobre arquivos
+Os notebooks desta prática podem usar os arquivos de áudio centralizados em `../data` em vez das cópias locais da pasta.
+
 ## Resumo das respostas das questões
 1. **Sinais senoidais**: conforme a frequência aumenta de `500 Hz` para `5000 Hz` e `10000 Hz`, cresce o número de oscilações no mesmo intervalo de tempo. Na reprodução, isso se traduz em sons progressivamente mais agudos.
 
