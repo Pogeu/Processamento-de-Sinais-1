@@ -2,6 +2,11 @@
 
 Esta pasta reúne os materiais da Aula Prática 1 da disciplina **Processamento de Sinais I**.
 
+## Autores:
+- Pedro Nicollas Pereira Azevedo Della Torre Bastos
+- Gabriel Florencio da Fonseca
+- Ricardo Alexandre Vieira da Silva
+
 ## Conteúdo da pasta
 - `Processamento_de_Sinais_I___Aula_Prática_1.pdf`: enunciado da prática.
 - notebooks Jupyter com a implementação e análise de cada item proposto.
