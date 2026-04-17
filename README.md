@@ -7,3 +7,6 @@ Cada atividade deve ter sua propria pasta.
 Dentro de cada pasta de atividade, devem ficar:
 - o PDF da pratica;
 - os notebooks Jupyter usados no desenvolvimento de cada questão.
+
+###contribuintes: 
+- Gabriel Florencio da Fonseca
