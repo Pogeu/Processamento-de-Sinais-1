@@ -2,6 +2,11 @@
 
 Esta pasta reúne os materiais da Aula Prática 3 da disciplina **Processamento de Sinais I**.
 
+## Autores:
+- Pedro Nicollas Pereira Azevedo Della Torre Bastos
+- Gabriel Florencio da Fonseca
+- Ricardo Alexandre Vieira da Silva
+
 ## Conteúdo da pasta
 - `Aula_Prática_3.pdf`: enunciado da prática.
 - notebooks Jupyter com a implementação e análise de cada questão proposta.
