@@ -1,41 +1,44 @@
-# Prática 4 - DFT e DCT
+# Pratica 4 - DFT e DCT
 
-Esta pasta reúne os materiais da prática 4 da disciplina **Processamento de Sinais I**.
+Esta pasta reune a implementacao e os resultados da Pratica 4 da disciplina **Processamento de Sinais I**.
 
-## Autores:
+## Autores
 - Pedro Nicollas Pereira Azevedo Della Torre Bastos
 - Gabriel Florencio da Fonseca
 - Ricardo Alexandre Vieira da Silva
 
-## Conteúdo da pasta
-- `Processamento_de_Sinais_I___Aula_Prática_3.pdf`: enunciado fornecido para a prática.
-- `aula_pratica_3.mlx` e `exemplo_aula_pratica_3.mlx`: materiais originais em MATLAB.
-- `sosias.jpg`: imagem utilizada nas questões de compressão bidimensional.
-- notebooks Jupyter com a implementação e análise de cada questão proposta.
+## Arquivos da pasta
+- `Aula_Prática_4.pdf`: enunciado da pratica.
+- `questao_1.ipynb`: comparacao entre DTFT e DFT para diferentes valores de `N`.
+- `questao_2.ipynb`: efeito do tamanho da DFT e do zero-padding na visualizacao espectral.
+- `questao_3.ipynb`: compressao do audio `handel.wav` por DCT e por FFT.
+- `questao_4.ipynb`: analise da concentracao de energia da imagem `sosias.jpg` na DCT2.
+- `questao_5.ipynb`: compressao da imagem `sosias.jpg` por blocos.
+- `relatorio_pratica_4.pdf`: relatorio final resumido da pratica.
 
-## Tema da prática
-A prática explora compressão de sinais e imagens com transformadas ortogonais, comparando o desempenho da DCT e da DFT na concentração de energia e na reconstrução com perda controlada.
+## Dados utilizados
+Os notebooks usam arquivos da pasta `data/` na raiz do repositorio:
+- `data/handel.wav`: usado apenas na questao 3.
+- `data/sosias.jpg`: usado apenas nas questoes 4 e 5.
 
-## Atividades propostas
-1. Comprimir o áudio `handel` usando DCT para diferentes níveis de preservação de energia.
-2. Repetir a compressão do áudio usando DFT/FFT e comparar com a DCT.
-3. Calcular a DCT2 da imagem `sosias.jpg` e analisar a distribuição de energia.
-4. Comprimir a imagem preservando diferentes percentuais de energia e comparar os resultados.
-5. Repetir a compressão da imagem por blocos `8x8` e `16x16`, comentando as diferenças.
+As questoes 1 e 2 nao dependem de arquivos externos.
 
-## Resumo das respostas das questões
-1. **Compressão por DCT no áudio**: a DCT concentrou a energia de `handel.wav` em poucos coeficientes, permitindo boa reconstrução mesmo com forte redução da quantidade de dados.
+## Estado atual dos notebooks
+- Os notebooks foram ajustados para localizar automaticamente a raiz do projeto, entao podem ser executados tanto a partir da raiz quanto a partir da propria pasta `pratica_4`.
+- As referencias a `handel.wav` e `sosias.jpg` foram removidas dos exercicios que nao usam esses arquivos.
+- Cada notebook ficou com apenas as importacoes e funcoes auxiliares necessarias para sua propria questao.
 
-2. **Compressão por DFT no áudio**: a FFT também reconstrói o sinal, mas em geral exige mais coeficientes para atingir qualidade semelhante, o que a torna menos eficiente para compressão do que a DCT.
+## Resumo dos resultados
+1. **Questao 1:** a DFT amostra a DTFT; aumentar `N` densifica a amostragem em frequencia sem alterar o conteudo do sinal.
+2. **Questao 2:** zero-padding melhora a interpolacao visual do espectro, mas a separacao real entre componentes depende do numero de amostras reais.
+3. **Questao 3:** a DCT concentrou energia em menos coeficientes que a FFT para niveis equivalentes de erro, tornando a compressao mais eficiente.
+4. **Questao 4:** a maior parte da energia da imagem ficou concentrada nas baixas frequencias da DCT2.
+5. **Questao 5:** blocos menores preservaram melhor a qualidade visual; blocos maiores comprimiram mais, com aumento do erro.
 
-3. **Energia da DCT2 da imagem**: a maior parte da energia da imagem ficou concentrada nas baixas frequências espaciais, mostrando que a DCT2 é adequada para compressão com perdas moderadas.
+## Como executar
+1. Abra o notebook desejado.
+2. Execute a primeira celula para configurar caminhos e importacoes.
+3. Rode as demais celulas em sequencia.
 
-4. **Compressão global da imagem**: níveis altos de preservação de energia mantêm a aparência visual próxima da original, enquanto níveis mais baixos aumentam o borramento e reduzem os detalhes finos.
-
-5. **Compressão por blocos**: blocos `8x8` e `16x16` permitem processamento local da imagem; `8x8` tende a ficar mais próximo do comportamento de codecs práticos, enquanto blocos maiores podem introduzir artefatos mais visíveis.
-
-## Observações sobre implementação
-- O enunciado original cita `handel.mat`, mas esse arquivo não está disponível no repositório.
-- Nesta implementação, as questões de áudio usam `../data/handel.wav`, que fornece um equivalente prático para as análises em Python.
-- As transformadas foram implementadas com `scipy.fft`, usando `dct`, `idct`, `dctn`, `idctn`, `fft` e `ifft`.
-- A imagem foi convertida para tons de cinza antes da análise por DCT2 para simplificar a interpretação da energia.
+## Observacao
+Se `data/handel.wav` ou `data/sosias.jpg` nao estiverem disponiveis, os notebooks que dependem deles nao poderao reproduzir os resultados correspondentes.
