@@ -11,3 +11,4 @@ Repositório para as praticas das aulas de Processamento de Sinais 1 do professo
 ## Contribuidores: 
 - Gabriel Florencio da Fonseca
 - Pedro Nicollas Pereira Azevedo Della Torre Bastos
+- Ricardo Alexandre Vieira da Silva
